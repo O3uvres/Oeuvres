@@ -1,0 +1,37 @@
+!!! NE PAS TOUCHER A CE FICHIER !!!
+Celui-ci contient l'historique des modifications réalisées,
+il permet au logiciel d'envoyer uniquement les nouvelles modifications au serveur.
+
+19/07/2023-17:56:13 ADD la-joconde leonard_de_vinci_la_joconde_5.jpg
+19/07/2023-17:56:49 ADD les-iris vincent_van_gogh_les_iris.jpg
+19/07/2023-17:57:51 ADD la-jeune-fille-a-la-perle johannes_vermeer_la_jeune_fille_a_la_perle.jpg
+19/07/2023-18:10:00 COMMIT
+20/07/2023-13:37:25 REMOVE la-joconde leonard_de_vinci_la_joconde_5.jpg
+20/07/2023-13:38:27 EDIT la-jeune-fille-a-la-perle  
+20/07/2023-13:38:38 REMOVE les-iris vincent_van_gogh_les_iris.jpg
+20/07/2023-14:00:00 COMMIT
+20/07/2023-14:31:44 EDIT la-jeune-fille-a-la-perle  
+20/07/2023-15:34:51 EDIT la-jeune-fille-a-la-perle  
+20/07/2023-15:36:31 EDIT la-jeune-fille-a-la-perle  
+20/07/2023-15:37:45 REMOVE la-jeune-fille-a-la-perle johannes_vermeer_la_jeune_fille_a_la_perle.jpg
+20/07/2023-15:42:05 ADD les-tournesols vincent_van_gogh_les_tournesols_4.jpg
+20/07/2023-15:43:59 ADD la-nuit-etoilee vincent_van_gogh_la_nuit_etoilee.jpg
+20/07/2023-15:45:43 ADD la-nuit-etoilee-2 vincent_van_gogh_la_nuit_etoilee_2.jpg
+20/07/2023-15:47:28 REMOVE la-nuit-etoilee-2 vincent_van_gogh_la_nuit_etoilee_2.jpg
+20/07/2023-16:00:00 COMMIT
+20/07/2023-16:22:05 COMMIT
+21/07/2023-11:26:51 EDIT les-tournesols  
+21/07/2023-11:29:40 REMOVE les-tournesols vincent_van_gogh_les_tournesols_4.jpg
+21/07/2023-11:29:50 REMOVE la-nuit-etoilee vincent_van_gogh_la_nuit_etoilee.jpg
+21/07/2023-11:36:22 COMMIT
+21/07/2023-11:53:14 ADD les-tournesols vincent_van_gogh_les_tournesols_4.jpg
+21/07/2023-11:53:56 REMOVE les-tournesols vincent_van_gogh_les_tournesols_4.jpg
+21/07/2023-14:26:21 EDIT la-bouture  
+21/07/2023-14:26:26 COMMIT
+03/09/2023-10:46:30 ADD la-joconde leonard_de_vinci_la_joconde.jpg
+03/09/2023-10:46:52 COMMIT
+03/09/2023-10:49:04 EDIT la-joconde  
+03/09/2023-10:49:11 EDIT la-joconde  
+03/09/2023-10:49:19 COMMIT
+03/09/2023-11:00:00 REMOVE la-joconde  leonard_de_vinci_la_joconde.jpg
+03/09/2023-11:06:11 COMMIT

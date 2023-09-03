@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- En tête : (CSS ; JAVASCRIPT ; METADONNEES ; TITRE) -->
+<head>
+    <link rel="stylesheet" href="/static/CSS/CSS.css">
+    <link rel="stylesheet" href="/static/CSS/MENU-BURGER.css">
+    <link rel="stylesheet" href="/static/CSS/HEADER.css">
+    <link rel="stylesheet" href="/static/CSS/FOOTER.css">
+    <link rel="stylesheet" href="/static/CSS/oeuvre.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oeuvres V10</title>
+    <script src="/static/JAVASCRIPT/oeuvre.js"></script>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+            $("header").load("/header"); 
+            $("footer").load("/footer");
+        });
+    </script>
+</head>
+
+<!-- Corps de la page : (HEADER ; MAIN ; FOOTER)  -->
+<body>
+
+    <!-- Header : (UN ; DEUX ; TROIS) -->
+    <header></header>
+
+    
+    <main>
+        <section class="container">
+            <div class="image-div">
+                <img class="item-picture" src="">
+            </div>
+            <div class="info-div">
+                <div class="title-div">
+                    <h1 class="item-name"></h1>
+                    <h2 class="item-author"></h2>
+                </div>
+                <div class="detail-div">
+                    <h3 class="detail-title">Informations : </h3>
+                    <p class="item-materiau-et-support">materiau et support : </p>
+                    <p class="item-dimensions">dimensions : </p>
+                    <p class="item-date">date : </p>
+                    <p class="item-lieu-de-conservation">lieu de conservation : </p>
+                </div>
+            </div>
+            <div class="categories-div">
+                <h3 class="categories-title">Caractéristiques : </h3>
+                <p class="item-representation">Représentation: </p>
+                <p class="item-image">Image: </p>
+                <p class="item-materialite">Matérialité: </p>
+                <p class="item-processus">Procéssus: </p>
+                <p class="item-presentation">Présentation: </p>
+            </div>
+            <!-- <div class="modification-div"> -->
+                <form action="/edit" method="GET">
+                    <input type="hidden" class="item-value" name="item">
+                    <input type="submit" class="edit-button" value="Modifier"/>
+                </form>
+                <form class="delete-form" action="/delete" method="POST">
+                    <input type="hidden" class="item-value" name="item">
+                    <input type="submit" class="delete-button" value="Supprimer"/>
+                </form>
+            <!-- </div> -->
+        </section>
+    </main>
+    
+    <!-- Footer : () -->
+    <footer></footer>
+</body>
+
+</html>

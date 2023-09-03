@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- En tête : (CSS ; JAVASCRIPT ; METADONNEES ; TITRE) -->
+<head>
+    <link rel="stylesheet" href="/static/CSS/CSS.css">
+    <link rel="stylesheet" href="/static/CSS/MENU-BURGER.css">
+    <link rel="stylesheet" href="/static/CSS/HEADER.css">
+    <link rel="stylesheet" href="/static/CSS/FOOTER.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oeuvres V10</title>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+            $("header").load("/header"); 
+            $("footer").load("/footer");
+        });
+    </script>
+</head>
+
+<!-- Corps de la page : (HEADER ; MAIN ; FOOTER)  -->
+<body>
+
+    <!-- Header : (UN ; DEUX ; TROIS) -->
+    <header></header>
+
+    <!-- Main : (Représentation ; Image ; Materialité ; Processus ; Présentation) -->
+    <main>
+        <div class="conteneur">
+            <!-- Représentation : (IMAGE ; TEXTE) -->
+            <section class="block">
+                <form action="/catalogue">
+                    <input type="hidden" name="representation"  value="5" />
+                    <input type="hidden" name="image"  value="0" />
+                    <input type="hidden" name="materialite"  value="0" />
+                    <input type="hidden" name="processus"  value="0" />
+                    <input type="hidden" name="presentation"  value="0" />
+                    <input type="submit" value="Envoyer les données" id="submit1">
+                    <label for="submit1">
+                        <img src="/static/IMAGES/HEADER/DURER_Albrecht.jpg" alt="DURER Albrecht, La Grande touffe d'herbe">
+                        <div class="block-texte">
+                            <h2>Représentation</h2>
+                            <p>(DURER Albrecht - La Grande touffe d'herbe)</p>
+                        </div>
+                </form>
+            </section>
+
+            <!-- Image : (IMAGE ; TEXTE) -->
+            <section class="block">
+                <form action="catalogue">
+                    <input type="hidden" name="representation"  value="0" />
+                    <input type="hidden" name="image"  value="5" />
+                    <input type="hidden" name="materialite"  value="0" />
+                    <input type="hidden" name="processus"  value="0" />
+                    <input type="hidden" name="presentation"  value="0" />
+                    <input type="submit" value="Envoyer les données" id="submit2">
+                    <label for="submit2">
+                        <img src="/static/IMAGES/HEADER/norman-rockwell.jpg" alt="norman-rockwell">
+                        <div class="block-texte">
+                            <h2>Image</h2>
+                            <p>(ROCKWELL Norman - Autoportrait)</p>
+                        </div>
+                    </label>
+                </form>
+            </section>
+
+            <!-- Materialité : (IMAGE ; TEXTE) -->
+            <section class="block">
+                <form action="/catalogue">
+                    <input type="hidden" name="representation"  value="0" />
+                    <input type="hidden" name="image"  value="0" />
+                    <input type="hidden" name="materialite"  value="5" />
+                    <input type="hidden" name="processus"  value="0" />
+                    <input type="hidden" name="presentation"  value="0" />
+                    <input type="submit" value="Envoyer les données" id="submit3">
+                    <label for="submit3">
+                        <img src="/static/IMAGES/HEADER/SOULAGES_Pierre.jpg" alt="SOULAGES Pierre">
+                        <div class="block-texte">
+                            <h2>Materialité</h2>
+                            <p>(SOULAGES Pierre)</p>
+                        </div>
+                    </label>
+                </form>
+            </section>
+
+            <!-- Processus : (IMAGE ; TEXTE) -->
+            <section class="block">
+                <form action="/catalogue">
+                    <input type="hidden" name="representation"  value="0" />
+                    <input type="hidden" name="image"  value="0" />
+                    <input type="hidden" name="materialite"  value="0" />
+                    <input type="hidden" name="processus"  value="5" />
+                    <input type="hidden" name="presentation"  value="0" />
+                    <input type="submit" value="Envoyer les données" id="submit4">
+                    <label for="submit4">
+                        <img src="/static/IMAGES/HEADER/Sol_Lewitt_2.jpg" alt="Sol Lewitt">
+                        <div class="block-texte">
+                            <h2>Processus</h2>
+                            <p>(SOL Lewitt)</p>
+                        </div>
+                    </label>
+                </form>
+            </section>
+
+            <!-- Présentation : (IMAGE ; TEXTE) -->
+            <section class="block">
+                <form action="/catalogue">
+                    <input type="hidden" name="representation"  value="0" />
+                    <input type="hidden" name="image"  value="0" />
+                    <input type="hidden" name="materialite"  value="0" />
+                    <input type="hidden" name="processus"  value="0" />
+                    <input type="hidden" name="presentation"  value="5" />
+                    <input type="submit" value="Envoyer les données" id="submit5">
+                    <label for="submit5">
+                        <img src="/static/IMAGES/HEADER/Duchamp_Marcel.jpg" alt="Duchamp Marcel, Fontaine (Urinoir)">
+                        <div class="block-texte">
+                            <h2>Présentation</h2>
+                            <p>(DUCHAMP Marcel - Fontaine (Urinoir))</p>
+                        </div>
+                    </label>
+                </form>
+            </section>
+        </div>
+    </main>
+    <!-- Footer : () -->
+    <footer></footer>
+</body>
+
+</html>

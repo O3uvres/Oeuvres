@@ -1,0 +1,110 @@
+<!-- Header : (UN ; DEUX ; TROIS) -->
+<!-- <header> -->
+    <nav class="orga">
+
+        <!-- Un : (LOGO) -->
+        <div class="trois">
+
+            <!-- Logo -->
+            <div class="Logo">
+                <a href="/" > <img src="/static/IMAGES/HEADER/Logo_BOURIGAULT_Jade.png" alt="Logo"> </a>
+            </div>
+
+            <!-- Propos : (ICON ; TITRE) -->
+            <div>
+                <a href="/propos">
+                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/amascaoj.json"
+                        trigger="hover"
+                        colors="primary:#ffffff"
+                        state="hover-2"
+                        style="width:5vh;height:5vh">
+                    </lord-icon>
+                    <p> A propos </p>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Deux : (SEARCH-BAR ; LOUPE) -->
+        <div class="deux">
+            <!-- <form action="/catalogue">  --> <!-- Avec le form il y avait un souci d'encondage de l'espace donc j'ai tout fait à partir de ton javascript-->
+                <div class="search-bar">
+                    <input id="search-bar" type="text" value="" placeholder="Rechercher un article" name="search" 
+                    onchange="
+                        window.location.href = '/catalogue?search=' + encodeURIComponent(this.value);
+                    ">
+                    <script>
+                        var parameters = location.search.substring(1).split('&'); // .substring(1) pour enlever le '?'
+                        for (let i = 0; i < parameters.length; i++) {
+                            let parameter = parameters[i].split('=');
+                            let pName = parameter[0]; // Car name il ne voulait pas
+
+                            if (pName == 'search') {
+                                let pValue = parameter[1];
+                                pValue = decodeURIComponent(decodeURIComponent(pValue));
+                                document.getElementById("search-bar").value = decodeURI(pValue); // Jsp pas pk j'ai décodé autant mais ça marche
+                            }
+                        }
+                    </script>
+                    <input type="submit" value="Envoyer les données" id="submit0" style="display: none;">
+                    <label for="submit0">
+                        <img src="/static/IMAGES/HEADER/loupe.png" alt="Bouton de recherche" class="loupe-image"> 
+                    </label>  
+                </div>
+            <!-- </form> --> 
+        </div>
+
+        <!-- Trois : (PROPOS ; ADD) -->
+        <div class="trois">
+
+            <!-- Add : (ICON ; TITRE) -->
+            <div class="connexion">
+                <a href="/add">
+                    
+                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/fpmskzsv.json"
+                        trigger="hover"
+                        colors="primary:#ffffff"
+                        style="width:5vh;height:5vh">
+                    </lord-icon>
+                    <p> Ajouter </p>
+                </a>
+            </div>  
+
+            <!-- Add : (ICON ; TITRE) -->
+            <div class="commit">
+                <script>
+                    function encodeMessage(message) {
+                        var y=document.createElement('span');
+                        y.innerHTML=message;
+                        return y.innerHTML;
+                    }
+                    async function maSuperFunction(e) {
+                        e.preventDefault();
+                        response = await fetch('/commit', {
+                            method: 'post'
+                        });
+                        if (response.status == 200) {
+                            alert(encodeMessage("Le serveur a été mis à jour avec succès !"));
+                        }
+                        else {
+                            alert(encodeMessage("Erreur lors de la mise à jour du serveur."));
+                        }
+                    }
+                </script>
+                <a href="/commit" onclick="maSuperFunction(event)">
+                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/wfadduyp.json"
+                        trigger="hover"
+                        colors="primary:#ffffff"
+                        style="width:5vh;height:5vh">
+                    </lord-icon>
+                    <p> Envoyer </p>
+                </a>
+            </div>
+        </div>
+    </nav>
+<!-- </header> -->

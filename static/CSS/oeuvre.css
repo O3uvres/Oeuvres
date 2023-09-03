@@ -1,0 +1,57 @@
+main {
+    background-color: white;
+    height:100%;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 110vh;
+    margin: 2.5vw;
+    gap:2.5vw;
+}
+
+.image-div img {
+    max-height: 100vh;
+    max-width: 45vw;
+}
+
+.info-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-div h2 {
+    font-style: italic;
+    color: lightcoral;
+}
+
+.detail-div {
+    background-color: #58D68D;
+    border-radius: 15px;
+    padding:2%;
+    width: 25vw;
+}
+
+.categories-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.infos h3{
+    text-align: center;
+}
+
+.edit-button, .delete-button {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    background-color: #58D68D;
+    padding: 20px;
+    border-radius: 50px;
+    line-height: 100px;
+}

@@ -1,0 +1,74 @@
+/* Fait disparaître la checkbox */
+input#menuBurger {
+    display : none;
+}
+
+/* Fait disparaître le menu */
+nav#navMenu {
+    position : relative; 
+    height : 0;
+    opacity : 0;
+    z-index: 9999;
+}
+
+/* Enlève la mise en page de liste du menu déroulé */
+nav#navMenu ul {
+    list-style : none;
+}
+
+/* Mise en page des rubriques du menu déroulé */
+nav#navMenu ul li a {
+    width : 10vw;
+    font-size: 1vmax;
+    text-transform: uppercase;
+    background-color: rgb(20, 129, 38);
+    border-bottom: 1px solid hsla(0, 0%, 0%, .1);
+    color : white;
+    text-decoration : none;
+    display : flex;
+    justify-content : center;
+    padding: 1%;
+    z-index: 1;
+}
+
+/* Mise en page du label (logo home) */
+label [for="menuBurger"] {
+    display : block;
+    width : 3vmax;
+    height : 3vmax;
+}
+
+/* Apparition menu déroulant */
+input#menuBurger:checked~nav#navMenu{
+    opacity : 1;
+}
+
+/* Fait apparaître le menu en fonction de la taille de l'écran */
+@media screen and (min-width:37.5rem) {
+    body {
+        overflow-x : hidden;
+    }
+    input#menuBurger:checked~.contenu {
+        margin: 0 0 0 9rem;
+    }
+    nav#navMenu ul{
+        width : 9rem;
+    }
+}
+
+/* @media screen and (min-width:62.75rem) {
+    label[for="menuBurger"] {
+        display: auto;
+    }
+    nav#navMenu ul{
+        height : auto;
+        opacity: 1;
+    }
+    nav#navMenu ul {
+        display : flex;
+        justify-content : space-around;
+        flex-direction : row;
+        width : auto;
+        margin : 1rem auto;
+    }
+}  */

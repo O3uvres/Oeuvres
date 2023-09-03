@@ -1,0 +1,157 @@
+* {
+    margin: 0px;
+}
+
+main {
+    padding-bottom: 5vh;
+    overflow: auto;
+}
+
+h1 {
+    margin: 25px 0px 25px 0px;
+}
+
+.new-artwork-form {
+    width: 75vw;
+    height: 110vh;
+    margin: auto;
+    display: flex;
+    gap: 10%;
+}
+
+footer {
+    margin : 0;
+    padding: 0;
+}
+
+
+/* ===================== Image box ===================== */
+.image-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+}
+
+#drag-and-drop-box {
+    /* background-color: #a4b7e3; */
+    background-color: #58D68D;
+    /* width: 60%; */
+    width: 100%;
+    /* min-width: 27.5em;
+    padding: 3.12em 1.87em; */
+    position: relative;
+    /* position: absolute; */
+    /* transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%; */
+    box-shadow: 0 1.25em 3.43em rgba(0, 0, 0, 0.08);
+    border-radius: 0.5em;
+
+    /* Background image */
+    background-size: cover;
+    background-position: center;
+}
+
+#drag-and-drop-box input[type="file"] {
+    display: none;
+}
+#drag-and-drop-box label {
+    display: block;
+    /* background-color: #025bee; */
+    background-color: rgb(20, 129, 38);
+    color: #ffffff;
+    font-size: 1.1em;
+    text-align: center;
+    width: 50%;
+    padding: 1em 0;
+    border-radius: 0.3em;
+    margin: 0 auto 1em auto;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-50%, -50%);   
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+}
+
+#drag-and-drop-box #image-display {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.25em;
+    flex-wrap: wrap;
+}
+#drag-and-drop-box #image-display figure {
+    width: 45%;
+}
+#drag-and-drop-box #image-display img {
+    width: 100%;
+}
+#drag-and-drop-box #image-display figcaption {
+    font-size: 0.8em;
+    text-align: center;
+    color: #5a5861;
+}
+
+#drag-and-drop-box .active {
+    border: 0.2em dashed #025bee;
+}
+#drag-and-drop-box #error {
+    text-align: center;
+    color: #ff3030;
+}
+
+
+
+/* ===================== Informatation box ===================== */
+.information-box {
+    display: flex;
+    flex-direction: column;
+    gap:1%;
+    width: 45%;
+}
+
+.information-box input {
+    height: 30px;
+    font-size: 1em;
+    border-color: #58D68D;
+}
+
+.information-box .range-information {
+    color: #58D68D;
+    margin: 0;
+}
+
+
+
+.information-box input:invalid {
+    border-color: #ff3030;
+}
+.information-box input:required {
+    border-color: #1D8348;
+}
+.information-box input:focus {
+    border-color: #025bee;
+}
+
+/* ===================== Les range ===================== */
+input[type="range"] {
+    -webkit-appearance:none;
+    background:rgb(20, 129, 38);
+    cursor:ew-resize;
+    border-radius:1.5rem;
+    width : 75%;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;  
+    border:1px solid #ddd;
+    width : 0.75rem;
+    height : 0.75rem;
+    border-radius:50%;
+    background:white;
+    box-shadow:0 0 .125rem #aaa
+}

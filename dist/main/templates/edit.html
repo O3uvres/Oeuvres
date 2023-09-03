@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- En tête : (CSS ; JAVASCRIPT ; METADONNEES ; TITRE) -->
+<head>
+    <link rel="stylesheet" href="/static/CSS/Propos.css">
+    <link rel="stylesheet" href="/static/CSS/add.css">  
+    <link rel="stylesheet" href="/static/CSS/MENU-BURGER.css">
+    <link rel="stylesheet" href="/static/CSS/HEADER.css">
+    <link rel="stylesheet" href="/static/CSS/FOOTER.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="/static/JAVASCRIPT/edit.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oeuvres V10</title>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+            $("header").load("/header"); 
+            $("footer").load("/footer");
+        });
+    </script>
+</head>
+
+<!-- Corps de la page : (HEADER ; MAIN ; FOOTER)  -->
+<body>
+
+    <!-- Header : (UN ; DEUX ; TROIS) -->
+    <header></header>
+
+    <main>
+        <h1>Ajout de nouvelles oeuvres</h1>
+
+        <form method="post" action="/edit" class="new-artwork-form" enctype=multipart/form-data>
+            <input type="hidden" id="item-input" name="item" value="">
+            <div class="image-box">
+                <div id="drag-and-drop-box">
+                    <input type="file" name="file" id="upload-button" accept="image/*"/>
+                    <label for="upload-button" id="upload-button-label">
+                        <i class="fa-solid fa-upload"></i>&nbsp; Chercher ou déposer une oeuvre
+                    </label>
+                    <div id="error"></div>
+                    <div id="image-display">
+                        <img src="" alt="" id="image-display-image">
+                        <figcaption id="image-display-figcaption"></figcaption>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="information-box">
+                <label for="name-input">Nom de l'oeuvre : </label>
+                <input type="text" id="name-input" name="name" placeholder="La Joconde" maxlength="55" autofocus required>
+                <label for="author-input">Nom de l'auteur : </label>
+                <input type="text" id="author-input" name="author" placeholder="Léonard de Vinci" maxlength="55" required>
+                <label for="materiau-et-support-input">Materiau et support :</label>
+                <input type="text" id="materiau-et-support-input" name="materiau et support" placeholder="Huile sur bois" size="50" maxlength="55">
+                <label for="dimensions-input">Dimensions</label>
+                <input type="text" id="dimensions-input" name="dimensions" placeholder="77 x 53 cm" maxlength="55">
+                <label for="date-input">Date</label>
+                <input type="text" id="date-input" name="date" placeholder="1503-1517" maxlength="55">
+                <label for="lieu-de-conservation-input">Lieu de conservation</label>
+                <input type="text" id="lieu-de-conservation-input" name="lieu de conservation" placeholder="Musée du Louvre" maxlength="55">
+
+                <label for="representation-filter">Représentation</label>
+                <input type="range" min="0" max="5" step="1" id="representation-filter" name="representation" class="range-information">
+                <label for="image-filter">Image</label>
+                <input type="range" min="0" max="5" step="1" id="image-filter" name="image" class="range-information">
+                <label for="materialite-filter">Matérialité</label>
+                <input type="range" min="0" max="5" step="1" id="materialite-filter" name="materialite" class="range-information">
+                <label for="processus-filter">Processus</label>
+                <input type="range" min="0" max="5" step="1" id="processus-filter" name="processus" class="range-information">
+                <label for="presentation-filter">Présentation</label>
+                <input type="range" min="0" max="5" step="1" id="presentation-filter" name="presentation" class="range-information">
+
+                <input type="submit" value="Modifier">
+            </div>
+        </form>
+    </main>
+    
+    <!-- Footer : () -->
+    <footer></footer>
+</body>
+
+</html>
