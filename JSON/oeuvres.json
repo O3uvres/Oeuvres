@@ -398,5 +398,21 @@
         "representation": "2",
         "src": "PICTURES/OEUVRES/PENONE_Giuseppe.png",
         "url": "alpi-maritime-continuera-a-crescere-tranne-che-in-quel-punto"
+    },
+    {
+        "author": "Bigboss",
+        "date": "03092023",
+        "dimensions": "77*53cm",
+        "id": 27,
+        "image": "2",
+        "lieu de conservation": "pc",
+        "materialite": "3",
+        "materiau et support": "jpeg",
+        "name": "Test1new",
+        "presentation": "0",
+        "processus": "4",
+        "representation": "1",
+        "src": "PICTURES/OEUVRES/bigboss_test1new.jpg",
+        "url": "test1new"
     }
 ]
