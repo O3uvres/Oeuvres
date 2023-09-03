@@ -1,0 +1,44 @@
+main {
+    background-color: white;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.image-div img {
+    max-width: 1000px;
+    height: 700px;
+}
+
+.info-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-div h2 {
+    font-style: italic;
+    color: lightcoral;
+}
+
+.detail-div {
+    background-color: #58D68D;
+    border-radius: 40px;
+    padding: 10px;
+    max-width: 500px;
+}
+
+.categories-div {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.infos h3{
+    text-align: center;
+}

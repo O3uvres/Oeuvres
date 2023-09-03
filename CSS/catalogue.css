@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    margin-bottom: 0.5vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* PAS TOUCHER */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+/* PAS TOUCHER */
+
+/* ====================== LES FILTRES ======================= */
+.filters-section {
+    margin: 50px auto;
+    width: fit-content;
+    background-color: grey;
+    padding:10px;
+}
+
+.filters-title {
+    margin: 5px;
+    text-align: center;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.filters-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+
+/* ===================== LES ARTICLES ======================= */
+.items-section {
+    color : white;
+    margin: 0px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+.item {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.item-content {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%,-50%); /* sert à ce que son point d'ancrage soit au centre de la div */
+    text-align: center;
+}
+
+.item a {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    line-height: 500px;
+    display: none;
+}
+
+.item:hover a {
+    display: block;
+}
+
+

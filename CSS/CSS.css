@@ -1,0 +1,109 @@
+body {
+    margin : 0;
+    padding : 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* PAS TOUCHER */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+/* PAS TOUCHER */
+
+main {
+    overflow: hidden;
+    height: 90vh;
+    margin: 0;
+    padding : 0;
+    
+}
+
+.conteneur {
+    display: flex;
+    transition : margin .5s ease;
+}
+
+.block {
+    background-color: green;
+    width: 20%;
+    height: 100vh;
+    overflow : clip;
+    border-right: 1px solid black;
+    position: relative;
+}
+
+.block:hover {
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+
+form {
+    height : 100%;
+}
+
+.block img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    font-size : 3rem;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: border 0.2s ease-in-out;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    z-index: 0;
+}
+
+.label:hover img {
+    border-left: 10px solid black;
+}
+
+.block-texte {
+    background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent */
+    padding: 1%; /* Espacement autour du texte */
+    text-align: center;
+    border: 1px solid #000; /* Encadrement fin */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    font-size: 14px; /* Taille de la police */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    position: absolute; /* Positionnement absolu pour superposer le texte sur l'image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* S'assurer que le texte est au-dessus de l'image */
+}
+
+
+
+
+
+
+
+
+/* Fait disparaître la checkbox */
+input#submit1 {
+    display : none;
+}
+
+input#submit2 {
+    display : none;
+}
+
+input#submit3 {
+    display : none;
+}
+
+input#submit4 {
+    display : none;
+}
+
+input#submit5 {
+    display : none;
+}

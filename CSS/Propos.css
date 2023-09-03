@@ -1,0 +1,38 @@
+body {
+    margin : 0;
+    padding : 0;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* PAS TOUCHER */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+/* PAS TOUCHER */
+
+main {
+    margin-left: 10%;
+    padding-left: 10%;
+    overflow: hidden;
+    margin: 0;
+    padding : 0;   
+    text-justify:inter-word; 
+    font-size: large;
+}
+
+main p {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+h1 {
+    text-align: center;
+    background-color: khaki;
+}

@@ -1,0 +1,119 @@
+/* Paramètres généraux du header */
+header {
+    overflow: visible;
+    height : 10vh;
+    background-image: url("../PICTURES/HEADER/Bandeau\ Maya.jpeg") ;
+    background-position: center right;
+    background-size: 100% ;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Paramètres des liens du header */
+header a {
+    color : white;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Mise en page intérieur du header */
+.orga {
+    width : 100% ;
+    display : flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+
+/* Mise en page première partie intérieure du header */
+.un {
+    width : 33.33%;
+    height : 10vh;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo img {
+    justify-content: left;
+    height : 5vh;
+    width : 5vh;
+    z-index : 1;
+}
+
+
+
+
+
+
+/* Mise en page seconde partie intérieure du header */
+.deux {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    overflow: clip;
+}
+
+.search-bar {
+    width : 100%;
+    height : 3vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    padding-top: 1vh;
+    padding-right: 1vh;
+}
+
+#search-bar {
+    width : 75%;;
+    height: 100%;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 100%;
+}
+  
+#submit0 {
+    display: none;
+}
+
+.loupe-image {
+    height: 3vh;
+    width: 3vh;
+    cursor: pointer;
+}
+
+
+
+
+/* Mise en page troisième partie intérieure du header */
+.trois {
+    gap : 20%;
+    padding-left : 10%;
+    width : 23.33%;
+    height : 10vh;
+    display : flex;
+    justify-content: space;
+    align-items: center;
+}
+
+.trois p {
+    align-items: center;
+    margin : 0.25%;
+    font-size: 0.7vw;
+}
+
+
+
+
+
+
+
+
+
+
+
