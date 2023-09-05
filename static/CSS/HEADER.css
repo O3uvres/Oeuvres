@@ -25,9 +25,6 @@ header a {
 }
 
 
-
-
-
 /* Mise en page première partie intérieure du header */
 .un {
     background-color: brown;
@@ -44,10 +41,6 @@ header a {
     width : 5vh;
     z-index : 1;
 }
-
-
-
-
 
 
 /* Mise en page seconde partie intérieure du header */
@@ -90,8 +83,6 @@ header a {
 }
 
 
-
-
 /* Mise en page troisième partie intérieure du header */
 .trois {
     gap : 20%;
@@ -108,14 +99,3 @@ header a {
     margin : 0.25%;
     font-size: 0.7vw;
 }
-
-
-
-
-
-
-
-
-
-
-
