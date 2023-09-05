@@ -69,10 +69,47 @@
     
     <main>
         <section class="container">
-
-            
+            <div class="image-div">
+                <img class="item-picture" src="">
+            </div>
+            <div class="info-div">
+                <div class="title-div">
+                    <h1 class="item-name"></h1>
+                    <h2 class="item-author"></h2>
+                </div>
+                <div class="detail-div">
+                    <h2 class="detail-title">Informations : </h2>
+                    <h4>Matériaux et support : </h4>
+                    <p class="item-materiau-et-support"></p>
+                    <h4>Dimensions : </h4>
+                    <p class="item-dimensions"></p>
+                    <h4>Date : </h4>
+                    <p class="item-date"></p>
+                    <h4>Lieu (actuel) de conservation : </h4>
+                    <p class="item-lieu-de-conservation"></p>
+                </div>
+            </div>
+            <div class="right-case">
+                <div class="categories-div">
+                    <h3 class="categories-title">Caractéristiques : </h3>
+                    <p class="item-representation">Représentation: </p>
+                    <p class="item-image">Image: </p>
+                    <p class="item-materialite">Matérialité: </p>
+                    <p class="item-processus">Procéssus: </p>
+                    <p class="item-presentation">Présentation: </p>
+                </div>
+                <div class="modification-div">
+                    <form action="/edit" method="GET">
+                        <input type="hidden" class="item-value" name="item">
+                        <input type="submit" class="edit-button" value="Modifier"/>
+                    </form>
+                    <form class="delete-form" action="/delete" method="POST">
+                        <input type="hidden" class="item-value" name="item">
+                        <input type="submit" class="delete-button" value="Supprimer"/>
+                    </form>
+                </div>
+            </div>
         </section>
-
     </main>
     
     <!-- Footer : () -->
