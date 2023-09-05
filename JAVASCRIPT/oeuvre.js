@@ -109,7 +109,7 @@ function createItemPage(item) {
     const materialiteElement = document.createElement("p");
     materialiteElement.innerText =  `Matérialité: ${item.materialite}/5`
     const processusElement = document.createElement("p");
-    processusElement.innerText = `Procèssus: ${item.processus}/5`
+    processusElement.innerText = `Processus: ${item.processus}/5`
     const presentationElement = document.createElement("p");
     presentationElement.innerText =  `Représentation: ${item.presentation}/5`
 
