@@ -3,8 +3,9 @@
 }
 
 main {
-    padding-bottom: 5vh;
-    overflow: auto;
+    margin-bottom: 2%;
+    /* overflow: auto; */
+    min-height: 80vh;
 }
 
 h1 {
@@ -13,10 +14,11 @@ h1 {
 
 .new-artwork-form {
     width: 75vw;
-    height: 110vh;
+    min-height: 80vh;
     margin: auto;
     display: flex;
     gap: 10%;
+    justify-content: center;
 }
 
 footer {
@@ -31,7 +33,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 45vw;
+    width: 25vw;
 }
 
 #drag-and-drop-box {
