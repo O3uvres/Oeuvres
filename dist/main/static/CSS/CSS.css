@@ -81,13 +81,6 @@ form {
     z-index: 0; /* S'assurer que le texte est au-dessus de l'image */
 }
 
-
-
-
-
-
-
-
 /* Fait disparaître la checkbox */
 input#submit1 {
     display : none;
