@@ -55,20 +55,3 @@ input#menuBurger:checked~nav#navMenu{
         width : 9rem;
     }
 }
-
-/* @media screen and (min-width:62.75rem) {
-    label[for="menuBurger"] {
-        display: auto;
-    }
-    nav#navMenu ul{
-        height : auto;
-        opacity: 1;
-    }
-    nav#navMenu ul {
-        display : flex;
-        justify-content : space-around;
-        flex-direction : row;
-        width : auto;
-        margin : 1rem auto;
-    }
-}  */
