@@ -1,22 +1,35 @@
 main {
     background-color: white;
+    height:150%;
 }
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 50px;
+    flex-wrap: wrap;
+    min-height: 71vh;
+    height: min-content;
+    margin: 2.5vw;
+    gap: 2.5vw;
+    align-content: center;
+    justify-content: space-evenly;
 }
 
 .image-div img {
-    max-width: 1000px;
-    height: 700px;
+    max-height: 100vh;
+    max-width: 45vw;
 }
 
 .info-div{
     display: flex;
     flex-direction: column;
+    height: min-content;
+    max-width: 35vw;
+    align-items: center;
+}
+
+.title-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title-div h2 {
@@ -25,20 +38,51 @@ main {
 }
 
 .detail-div {
-    background-color: #58D68D;
-    border-radius: 40px;
-    padding: 10px;
-    max-width: 500px;
+    background-color: #27d8de;
+    border-radius: 15px;
+    padding-left: 5%;
+    padding-bottom: 2%;
+    width: 20vw;
 }
 
 .categories-div {
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
-    border-radius: 40px;
+    align-items: center;
+    background-color: #bddade;
+    border-radius: 15px;
     padding: 10px;
+    height: 50%;
+    justify-content: center;
 }
 
 .infos h3{
     text-align: center;
+}
+
+.edit-button, .delete-button {
+    text-decoration: none;
+    color: black;
+    background-color: #bddade;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.modification-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    width: 100%;
+}
+
+.modification-div form{
+    width:100%;
+}
+
+.right-case {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
