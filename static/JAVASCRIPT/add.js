@@ -6,13 +6,13 @@ function encodeMessage(message) {
 
 function showMessage(status) {
   if (status == 200) {
-    alert(encodeMessage("L'oeuvre a été ajoutée avec succès !"));
+    alert(encodeMessage("L'oeuvre a ete ajoutee avec succes !"));
   } 
   else if (status == 400) {
     alert(encodeMessage("Requette incorrecte."));
   }
   else if (status == 417) {
-    alert(encodeMessage("Aucune image n'a été sélectionnée."));
+    alert(encodeMessage("Aucune image n'a ete selectionnee."));
   }
   else if (status == 500) {
     alert(encodeMessage("Erreur lors de l'ajout de l'oeuvre."));
