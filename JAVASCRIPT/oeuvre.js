@@ -1,30 +1,23 @@
-function getItem(items) {
-    /* Fonction qui s'occupe de récupérer les paramètres dans l'url pour afficher la bonne page */
-    var parameters = location.search.substring(1).split("&"); // .substring(1) pour enlever le "?"
-    console.log("location.search : " + location.search);
-
-    for (let i = 0; i < parameters.length; i++) {
-        let parameter = parameters[i].split("=");
-        let pName = parameter[0]; // Car name il ne voulait pas
-        let value = parameter[1];
-        value = decodeURIComponent(decodeURIComponent(value));
-
-        if (pName == "item") {
-            url_name = decodeURI(value);
-
-            for (let i = 0; i < items.length; i++) {
-                const item = items[i];
-                if (item.url == url_name) {
-                    return item;
-                }
-            }
-        }
-    }
-    return null;
+function encodeMessage(message) {
+    var y=document.createElement('span');
+    y.innerHTML=message;
+    return y.innerHTML;
 }
+  
+function showMessage(status) {
+    if (status == 200) {
+      alert(encodeMessage("L'oeuvre a ete supprimee avec succes !"))
+    } 
+    else if (status == 500) {
+      alert(encodeMessage("Erreur lors de la suppression de l'oeuvre."))
+    }
+}
+
+
 
 function createNoItemPage() {
     const sectionContainer = document.querySelector(".container");
+    sectionContainer.innerHTML = "";
 
     const error = document.createElement("h1");
     error.classList = ["error-message"];
@@ -34,108 +27,73 @@ function createNoItemPage() {
 }
 
 function createItemPage(item) {
-    const sectionContainer = document.querySelector(".container");
-
-
-    /// création de la div "Image"
-    const imageDiv = document.createElement("div");
-    imageDiv.classList = ["image-div"];
-
     /* Création de l'image */
-    const srcElement = document.createElement("img");
-    console.log("article.src", item.src);
-    srcElement.src = item.src;
-    imageDiv.appendChild(srcElement)
-    sectionContainer.appendChild(imageDiv)
+    const imageElt = document.querySelector(".item-picture");
+    imageElt.src = item.src;
     
 
     /// création de la div "information" dans laquelle se trouve toutes les informations 
     /// telles que le nom de l'auteur, la date, le lieu de conservation ...
-    const infoDiv = document.createElement("div");
-    infoDiv.classList = ["info-div"];
-
     // Sous div "title"
-    const titleDiv = document.createElement("div");
-    titleDiv.classList = ["title-div"];
-
-    const nomElt = document.createElement("h1");
+    const nomElt = document.querySelector(".item-name");
     nomElt.innerText = item.name;
-    const authorElt = document.createElement("h2");
+    const authorElt = document.querySelector(".item-author");
     authorElt.innerText = item.author;
-
     // Sous div "detail"
-    const detailDiv = document.createElement("div");
-    detailDiv.classList = ["detail-div"];
-
-    const titleDetailsElt = document.createElement("h3");
-    titleDetailsElt.innerText = "Informations : ";
-    const materiauEtSupportElt = document.createElement("p");
-    materiauEtSupportElt.innerText = "materiau et support : " + item["materiau et support"];
-    const dimensionsElt = document.createElement("p");
-    dimensionsElt.innerText = "dimensions : " + item["dimensions"];
-    const dateElt = document.createElement("p");
-    dateElt.innerText = "date : " + item["date"];
-    const lieuDeConservationElt = document.createElement("p");
-    lieuDeConservationElt.innerText = "lieu de conservation : " + item["lieu de conservation"];
-
-    // Ajout des élements à la div "information"
-    titleDiv.appendChild(nomElt);
-    titleDiv.appendChild(authorElt);
-    detailDiv.appendChild(titleDetailsElt);
-    detailDiv.appendChild(materiauEtSupportElt);
-    detailDiv.appendChild(dimensionsElt);
-    detailDiv.appendChild(dateElt);
-    detailDiv.appendChild(lieuDeConservationElt);
-    infoDiv.appendChild(titleDiv);
-    infoDiv.appendChild(detailDiv);
-    sectionContainer.appendChild(infoDiv);
-
-
-
-    /* Ajout des éléments créés à l'HTML */
-
+    const materiauEtSupportElt = document.querySelector(".item-materiau-et-support");
+    materiauEtSupportElt.innerText = item["materiau et support"];
+    const dimensionsElt = document.querySelector(".item-dimensions");
+    dimensionsElt.innerText = item["dimensions"];
+    const dateElt = document.querySelector(".item-date");
+    dateElt.innerText = item["date"];
+    const lieuDeConservationElt = document.querySelector(".item-lieu-de-conservation");
+    lieuDeConservationElt.innerText = item["lieu de conservation"];
 
     /// Création de la div "Categories" dans laquelle se trouve les filtres des différentes catégories
-    const categoriesDiv = document.createElement("div");
-    categoriesDiv.classList = ["categories-div"];
-
     // Création de tous les éléments de cette div
-    const titleCategoriesElt = document.createElement("h3");
-    titleCategoriesElt.innerText = "Caractéristiques : ";
-    const representationElement = document.createElement("p");
+    const representationElement = document.querySelector(".item-representation");
     representationElement.innerText =  `Représentation: ${item.representation}/5`
-    const imageElement = document.createElement("p");
+    const imageElement = document.querySelector(".item-image");
     imageElement.innerText =  `Image: ${item.image}/5`
-    const materialiteElement = document.createElement("p");
+    const materialiteElement = document.querySelector(".item-materialite");
     materialiteElement.innerText =  `Matérialité: ${item.materialite}/5`
-    const processusElement = document.createElement("p");
+    const processusElement = document.querySelector(".item-processus");
     processusElement.innerText = `Procéssus: ${item.processus}/5`
-    const presentationElement = document.createElement("p");
-    presentationElement.innerText =  `Représentation: ${item.presentation}/5`
-    
-    // Ajout des filtres à la div "Categories"
-    sectionContainer.appendChild(categoriesDiv)
-    categoriesDiv.appendChild(titleCategoriesElt)
-    categoriesDiv.appendChild(representationElement)
-    categoriesDiv.appendChild(imageElement)
-    categoriesDiv.appendChild(materialiteElement)
-    categoriesDiv.appendChild(processusElement)
-    categoriesDiv.appendChild(presentationElement)
+    const presentationElement = document.querySelector(".item-presentation");
+    presentationElement.innerText =  `Présentation: ${item.presentation}/5`
+
+    // Mise en place des boutons de modification et de suppression
+    const itemValueInputs = document.querySelectorAll(".item-value");
+    for (let i = 0; i < itemValueInputs.length; i++) {
+        itemValueInputs[i].value = item.url;
+    }
+
+    const deleteForm = document.querySelector(".delete-form");
+    deleteForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        data = new FormData(deleteForm);
+        response = await fetch("/delete", {
+            method: "post",
+            body: data
+        });
+        showMessage(response.status);
+        if (response.status == 200) {
+            location.href = "/catalogue";
+        }
+    }, false);
 }
 
 
 
 
 window.addEventListener("load", async () => {
-    
-    const json = await fetch("JSON/oeuvres.json");
-    const items = await json.json();
-    const item = getItem(items);
-    console.log("item :", item);
+    const jsonItem = await fetch(window.location.href + "/json");
+    const item = await jsonItem.json();
     if (item == null) {
         createNoItemPage();
     }
     else {
-        createItemPage(item)
+        createItemPage(item);
     }
 });
