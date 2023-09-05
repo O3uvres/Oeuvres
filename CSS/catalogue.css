@@ -1,10 +1,4 @@
-body {
-    margin: 0;
-    margin-bottom: 0.5vh;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* PAS TOUCHER */
+/* ====================== PAS TOUCHER ====================== */
 ::-webkit-scrollbar {
     display: none;
 }
@@ -13,14 +7,32 @@ html {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
 }
-/* PAS TOUCHER */
+
+/* ====================== Espacement des blocs ====================== */
+body {
+    margin : 0;
+    padding : 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    margin-bottom: 200px;
+}
+
+footer {
+    margin-top: 50px;
+}
 
 /* ====================== LES FILTRES ======================= */
 .filters-section {
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    width : 50%;
+    padding: 10px;
     margin: 50px auto;
-    width: fit-content;
-    background-color: grey;
-    padding:10px;
+    background-color: rgb(160, 160, 160);
+    z-index: 999;
 }
 
 .filters-title {
@@ -30,17 +42,37 @@ html {
 
 .filters {
     display: flex;
-    gap: 15px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.filters-column {
-    display: flex;
+.filter-raw {
+    display : flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    width : 20%;
 }
 
+.filter-raw label {
+    font-size : 85%
+}
 
+input[type="range"] {
+    -webkit-appearance:none;
+    background:rgb(20, 129, 38);
+    cursor:ew-resize;
+    border-radius:1.5rem;
+    width : 75%;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;  
+    border:1px solid #ddd;
+    width:1vw;
+    height:1vw;
+    border-radius:50%;
+    background:white;
+    box-shadow:0 0 .125rem #aaa
+}
 
 /* ===================== LES ARTICLES ======================= */
 .items-section {
@@ -52,6 +84,7 @@ html {
     gap: 50px;
 }
 .item {
+    border: 1px solid #000;
     width: 400px;
     height: 500px;
     position: relative;
@@ -60,11 +93,19 @@ html {
 }
 
 .item-content {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%,-50%); /* sert à ce que son point d'ancrage soit au centre de la div */
+    color : black;
+    background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent */
+    padding: 1%; /* Espacement autour du texte */
     text-align: center;
+    border: 1px solid #000; /* Encadrement fin */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    font-size: 14px; /* Taille de la police */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    position: absolute; /* Positionnement absolu pour superposer le texte sur l'image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* S'assurer que le texte est au-dessus de l'image */
 }
 
 .item a {
