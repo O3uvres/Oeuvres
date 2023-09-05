@@ -69,24 +69,26 @@
         <section class="filters-section">
             <h3 class="filters-title">Filtres</h3>
             <form action="" method="get" class="filters">
-                <div class="filters-column">
-                    <label for="representation-filter">Représentation</label>
-                    <input type="range" min="0" max="5" step="1" id="representation-filter" name="representation">
-                    <br>
-                    <label for="image-filter">Image</label>
-				    <input type="range" min="0" max="5" step="1" id="image-filter" name="image">
-                </div>
-                <div class="filters-column">
-                    <label for="materialite-filter">Matérialité</label>
-                    <input type="range" min="0" max="5" step="1" id="materialite-filter" name="materialite">
-                    <br>
-                    <label for="processus-filter">Processus</label>
-				    <input type="range" min="0" max="5" step="1" id="processus-filter" name="processus">
-                </div>
-                <div class="filters-column">
-                    <label for="presentation-filter">Présentation</label>
-                    <input type="range" min="0" max="5" step="1" id="presentation-filter" name="presentation">
-                </div>
+                    <div class="filter-raw">
+                        <label for="representation-filter">Représentation</label>
+                        <input type="range" min="0" max="5" step="1" id="representation-filter" name="representation">
+                    </div>
+                    <div class="filter-raw">
+                        <label for="image-filter">Image</label>
+                        <input type="range" min="0" max="5" step="1" id="image-filter" name="image" data-label="Image">
+                    </div>
+                    <div class="filter-raw">
+                        <label for="materialite-filter">Matérialité</label>
+                        <input type="range" min="0" max="5" step="1" id="materialite-filter" name="materialite">
+                    </div>
+                    <div class="filter-raw">
+                        <label for="processus-filter">Processus</label>
+                        <input type="range" min="0" max="5" step="1" id="processus-filter" name="processus">
+                    </div>
+                    <div class="filter-raw">
+                        <label for="presentation-filter">Présentation</label>
+                        <input type="range" min="0" max="5" step="1" id="presentation-filter" name="presentation">
+                    </div>
             </form>
         </section>
         <section class="items-section">
