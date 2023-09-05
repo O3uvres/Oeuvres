@@ -3,16 +3,16 @@ function encodeMessage(message) {
     y.innerHTML=message;
     return y.innerHTML;
 }
-  
+
+
 function showMessage(status) {
     if (status == 200) {
-      alert(encodeMessage("L'oeuvre a été supprimée avec succès !"))
+      alert(encodeMessage("L'oeuvre a ete supprimee avec succes !"))
     } 
     else if (status == 500) {
       alert(encodeMessage("Erreur lors de la suppression de l'oeuvre."))
     }
 }
-
 
 
 function createNoItemPage() {
@@ -25,6 +25,7 @@ function createNoItemPage() {
     
     sectionContainer.appendChild(error);
 }
+
 
 function createItemPage(item) {
     /* Création de l'image */
@@ -41,13 +42,13 @@ function createItemPage(item) {
     authorElt.innerText = item.author;
     // Sous div "detail"
     const materiauEtSupportElt = document.querySelector(".item-materiau-et-support");
-    materiauEtSupportElt.innerText = "materiau et support : " + item["materiau et support"];
+    materiauEtSupportElt.innerText = item["materiau et support"];
     const dimensionsElt = document.querySelector(".item-dimensions");
-    dimensionsElt.innerText = "dimensions : " + item["dimensions"];
+    dimensionsElt.innerText = item["dimensions"];
     const dateElt = document.querySelector(".item-date");
-    dateElt.innerText = "date : " + item["date"];
+    dateElt.innerText = item["date"];
     const lieuDeConservationElt = document.querySelector(".item-lieu-de-conservation");
-    lieuDeConservationElt.innerText = "lieu de conservation : " + item["lieu de conservation"];
+    lieuDeConservationElt.innerText = item["lieu de conservation"];
 
     /// Création de la div "Categories" dans laquelle se trouve les filtres des différentes catégories
     // Création de tous les éléments de cette div
@@ -83,8 +84,6 @@ function createItemPage(item) {
         }
     }, false);
 }
-
-
 
 
 window.addEventListener("load", async () => {
