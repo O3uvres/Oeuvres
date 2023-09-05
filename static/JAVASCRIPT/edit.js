@@ -24,10 +24,10 @@ function encodeMessage(message) {
 }
 function showMessage(status) {
   if (status == 200) {
-    alert(encodeMessage("L'oeuvre a été mise à jour avec succès !"))
+    alert(encodeMessage("L'oeuvre a ete mise a jour avec succes !"))
   } 
   else if (status == 500) {
-    alert(encodeMessage("Erreur lors de la mise à jour de l'oeuvre."))
+    alert(encodeMessage("Erreur lors de la mise a jour de l'oeuvre."))
   }
 }
 
