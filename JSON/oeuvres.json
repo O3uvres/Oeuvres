@@ -112,22 +112,6 @@
         "url": "fontaine-urinoir"
     },
     {
-        "author": "KANDINSKY Wassily",
-        "date": "1925",
-        "dimensions": "128x201 cm",
-        "id": 8,
-        "image": "5",
-        "lieu de conservation": "Paris, Centre G. Pompidou",
-        "materialite": "2",
-        "materiau et support": "huile sur toile",
-        "name": "Gelb-Rot-Blau",
-        "presentation": "1",
-        "processus": "3",
-        "representation": "1",
-        "src": "PICTURES/OEUVRES/KANDINSKY_Wassily.jpg",
-        "url": "gelb-rot-blau"
-    },
-    {
         "author": "BONNARD Pierre",
         "date": "1930",
         "dimensions": "50x80 cm",
@@ -152,7 +136,7 @@
         "lieu de conservation": "Paris, Centre G. Pompidou",
         "materialite": "2",
         "materiau et support": "bronze",
-        "name": "L'orage",
+        "name": "L'orage_test2",
         "presentation": "1",
         "processus": "3",
         "representation": "5",
