@@ -111,7 +111,7 @@ function createItemPage(item) {
     const processusElement = document.createElement("p");
     processusElement.innerText = `Processus: ${item.processus}/5`
     const presentationElement = document.createElement("p");
-    presentationElement.innerText =  `Représentation: ${item.presentation}/5`
+    presentationElement.innerText =  `Présentation: ${item.presentation}/5`
 
     // Ajout des filtres à la div "Categories"
     sectionContainer.appendChild(categoriesDiv)
